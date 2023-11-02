@@ -1,12 +1,19 @@
 import "./App.css";
-import { faSquare } from "@fortawesome/free-regular-svg-icons";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Routes, Route } from "react-router-dom";
+
+//pages
+import Main from "./pages/main";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 function App() {
   return (
     <>
-      <FontAwesomeIcon icon={faFacebook} size="2x" />
+      <Header />
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
+      <Footer />
     </>
   );
 }
