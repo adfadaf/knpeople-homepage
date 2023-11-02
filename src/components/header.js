@@ -1,14 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { menu } from "../db/db";
 import headerCss from "./header.module.css";
 import { Link } from "react-router-dom";
 
 export default function Header() {
   const [menuOn, setMenuOn] = useState("");
+  const [bgOn, setBgOn] = useState("");
+
+  useEffect(() => {
+    if (menuOn === headerCss.menuOn) {
+      setBgOn(headerCss.headerBgOn);
+    } else {
+      setBgOn("");
+    }
+  }, [menuOn]);
+
   return (
     <>
+      <div className={`${headerCss.block}`} />
       <header
-        className={`position-fixed w-100 ${headerCss.header} ${menuOn} `}
+        className={`position-fixed w-100 top-0 ${headerCss.header} ${menuOn} `}
         onMouseLeave={() => setMenuOn("")}
       >
         <div className={`container position-relative`}>
@@ -46,6 +57,7 @@ export default function Header() {
           </nav>
         </div>
       </header>
+      <div className={`${headerCss.headerBg} ${bgOn}`} />
     </>
   );
 }

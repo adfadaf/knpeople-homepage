@@ -1,0 +1,30 @@
+.banner {
+  padding: 32px 0;
+  background-color: #fff;
+}
+
+.contentWrap {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.content {
+  width: 25%;
+  padding: 0 10px;
+}
+.content:first-child {
+  padding-left: 0;
+}
+.content:last-child {
+  padding-right: 0;
+}
+
+.content h4 {
+  padding: 16px 0;
+  font-weight: bold;
+}
+.content p {
+  color: #999;
+  font-size: 14px;
+}

@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 
 //pages
 import Main from "./pages/main";
@@ -13,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
       </Routes>
+      <Outlet />
       <Footer />
     </>
   );
