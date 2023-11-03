@@ -82,3 +82,59 @@
   border-bottom: 1px solid #dee3eb;
   width: 100%;
 }
+
+.menuBtn {
+  display: none;
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobileWrap {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 99;
+  border-left: 1px solid #000;
+}
+.mobileMain {
+}
+.mobileMain > li {
+  cursor: pointer;
+  border-bottom: 1px solid black;
+  padding-left: 1rem;
+}
+.mobileSub {
+  background-color: red;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.mobileSub li a {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 80px;
+  }
+  .nav {
+    display: none;
+  }
+  .menuBtn {
+    display: block;
+  }
+
+  .mobileWrap {
+    display: block;
+  }
+}

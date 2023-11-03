@@ -1,4 +1,4 @@
-import { contact } from "../../db/db";
+import { business } from "../../db/db";
 import businessCss from "./business.module.css";
 
 export default function Buisiness() {
@@ -6,15 +6,19 @@ export default function Buisiness() {
     <>
       <section className={`${businessCss.business}`}>
         <div className={`container`}>
-          <h2>Business</h2>
-          <h2>사업분야</h2>
-          <div className={`${businessCss.wrap}`}>
-            {contact.map((contact, i) => {
+          <h3 className={`${businessCss.title}`}>business</h3>
+          <span className={`${businessCss.subTitle}`}>사업분야</span>
+          <div className={`${businessCss.wrap} py-4`}>
+            {business.map((business, i) => {
               return (
-                <div className={`${businessCss.content}`}>
-                  <h4>{contact.title}</h4>
-                  <p>{contact.content}</p>
-                  <div>아이콘</div>
+                <div className={`${businessCss.content}`} key={i}>
+                  <h4>{business.title}</h4>
+                  <p>{business.content}</p>
+                  <div className={`${businessCss.icon}`}>
+                    <div className={`${businessCss.iconBox}`}>
+                      <img src={`/img/${business.icon}.png`} />
+                    </div>
+                  </div>
                 </div>
               );
             })}

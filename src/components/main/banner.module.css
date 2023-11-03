@@ -1,12 +1,36 @@
 .banner {
-  padding: 32px 0;
+  padding: 8rem 0;
   background-color: #fff;
+}
+.bannerBox {
+  display: flex;
+  position: relative;
+  padding-bottom: 37.2%;
+  background: url(/public/img/banner.jpg) no-repeat;
+  background-size: cover;
+}
+.innerBanenr {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.innerBanenr h3 {
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: bold;
+  padding-bottom: 2rem;
+}
+.innerBanenr span {
+  font-size: 1.5rem;
+  line-height: 1.3;
 }
 
 .contentWrap {
   display: flex;
   justify-content: center;
   text-align: center;
+  padding-top: 6rem;
 }
 
 .content {
@@ -27,4 +51,62 @@
 .content p {
   color: #999;
   font-size: 14px;
+}
+
+.iconBox {
+  display: inline-block;
+  background-color: #f1f1f1;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+}
+.icon {
+  font-size: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+@media screen and (max-width: 992px) {
+  .innerBanenr h3 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+  }
+  .innerBanenr span {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    padding-top: 0;
+  }
+  .contentWrap {
+    flex-wrap: wrap;
+  }
+  .content {
+    width: 50%;
+    padding: 10px;
+  }
+  .content:first-child {
+    padding-left: 0;
+  }
+  .content:last-child {
+    padding-right: 0;
+  }
+  .innerBanenr h3 {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+  }
+  .innerBanenr span {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
 }

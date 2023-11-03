@@ -1,3 +1,6 @@
+import { faMagnifyingGlass, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faComments, faLightbulb } from "@fortawesome/free-regular-svg-icons";
+
 const menu = [
   {
     menu: "회사소개",
@@ -33,28 +36,45 @@ const banner = [
     title: "분석합니다",
     content:
       "실력을 갖춘 IT 전문가는 느낌보다는 데이터로 시작합니다. 데이터를 분석하여 고객의 요구를 이해하고, 사용자 경험을 개선하기 위한 방안을 도출합니다.",
+    icon: faMagnifyingGlass,
   },
   {
     title: "이야기합니다",
     content:
       "IT 기술을 이용하는 건 결국 사람입니다. 사람과 대화하고 사람을 이해하고 사람을 배려합니다. 우리는 이야기하는 IT 기업입니다.",
+    icon: faComments,
   },
   {
     title: "고민합니다",
     content:
       "고객님의 문제를 함께 고민하고 그려보고 경험하며, 경험을 바탕으로 더 나은 해답을 제시하겠습니다.",
+    icon: faLightbulb,
   },
   {
     title: "함께합니다",
     content:
       "서비스에 제공으로 그치지 않고 사후관리까지 철저한 마무리로 든든한 파트너로써 고객님들과 함께 하겠습니다.",
+    icon: faUsers,
   },
 ];
 
-const contact = [
-  { title: "Contact Center", content: "어쩌구", icon: "" },
-  { title: "통합 커뮤니케이션", content: "어쩌구", icon: "" },
-  { title: "SD-WAN", content: "어쩌구", icon: "" },
+const business = [
+  {
+    title: "S/I",
+    content:
+      "통합 정보시스템을 대상으로 최적의 개발방법론을 적용하여 맞춤형 서비스 제공",
+    icon: "si",
+  },
+  {
+    title: "Consulting",
+    content: "정보시스템 구축 및 운영의 전문화된 서비스를 제공",
+    icon: "consulting",
+  },
+  {
+    title: "Solution",
+    content: "정보시스템 구축 및 운영의 전문화된 서비스를 제공",
+    icon: "solution",
+  },
 ];
 
-export { menu, banner, contact };
+export { menu, banner, business };
