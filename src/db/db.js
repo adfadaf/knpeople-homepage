@@ -5,7 +5,7 @@ const menu = [
   {
     menu: "회사소개",
     subMenu: [
-      { id: "intro", title: "사업소개" },
+      { id: "intro", title: "회사개요" },
       { id: "ceo", title: "CEO 인사말" },
       { id: "history", title: "연혁" },
       { id: "map", title: "오시는 길" },
@@ -77,4 +77,16 @@ const business = [
   },
 ];
 
-export { menu, banner, business };
+const company = {
+  company: "(주)케이엔피플",
+  since: "2018년 09월 21일",
+  business: "소프트웨어 개발 및 공급업",
+  address:
+    "서울특별시 광진구 광나루로56길85, 사무동17층08호(구의동,테크노마트) 케이엔피플",
+  tel: "02-6212-7882",
+  email: "help@knpeople.com",
+  ceo: "김기남",
+  businessNum: "492-87-01077",
+};
+
+export { menu, banner, business, company };

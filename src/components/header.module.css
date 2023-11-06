@@ -15,7 +15,7 @@
   height: 0;
   position: fixed;
   bottom: 0;
-  background-color: transparent;
+  background-color: black;
   transition: background-color 0.2s;
 }
 .headerBgOn {
@@ -96,33 +96,31 @@
 }
 
 .mobileWrap {
-  display: none;
+  display: block;
   position: fixed;
-  right: 0;
+  right: -50%;
   top: 0;
-  width: 60%;
+  width: 50%;
   height: 100%;
   background-color: #fff;
   z-index: 99;
   border-left: 1px solid #000;
-}
-.mobileMain {
-}
-.mobileMain > li {
-  cursor: pointer;
-  border-bottom: 1px solid black;
-  padding-left: 1rem;
-}
-.mobileSub {
-  background-color: red;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.4s;
-}
-.mobileSub li a {
-  display: block;
+  transition: all 0.2s;
 }
 
+.mbSub {
+  /* display: none; */
+  max-height: 0;
+  overflow: hidden;
+  background-color: black;
+  transition: max-height 5s;
+}
+.mbSubActive + ul {
+  max-height: 9999px;
+}
+.mbOn {
+  right: 0;
+}
 @media screen and (max-width: 768px) {
   .header {
     height: 80px;
@@ -131,10 +129,6 @@
     display: none;
   }
   .menuBtn {
-    display: block;
-  }
-
-  .mobileWrap {
     display: block;
   }
 }

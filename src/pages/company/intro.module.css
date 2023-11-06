@@ -1,0 +1,105 @@
+.wrap {
+  padding: 5rem 0;
+}
+.wrap h3 {
+  font-size: 1.75rem;
+  padding-bottom: 3rem;
+}
+.wrap strong {
+  color: #009cff;
+}
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table table {
+  font-size: 20px;
+  color: #191919;
+  text-align: left;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 15px 0;
+  font-weight: 500;
+  caption-side: top;
+}
+
+.table caption {
+  font-size: 20px;
+  color: #191919;
+  text-align: left;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 15px 0;
+  font-weight: 500;
+  caption-side: top;
+}
+
+table th,
+table td {
+  padding: 1rem;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+.table th {
+  border-bottom: 1px solid #dbdbdb;
+  color: #191919;
+  text-align: center;
+  font-weight: bold;
+}
+
+.table td {
+  border-bottom: 1px solid #dbdbdb;
+  color: #999;
+  font-weight: 300;
+}
+
+.contentBox {
+  text-align: center;
+  padding-top: 3rem;
+}
+.contentBox h2 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 500;
+}
+/* .dot {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: bold;
+  top: -10px;
+}
+.left {
+  left: 250px;
+}
+.right {
+  right: 250px;
+} */
+.contentBox img {
+  width: 300px;
+}
+.content {
+  padding-top: 2rem;
+  color: #999;
+}
+
+@media screen and (max-width: 992px) {
+  table th,
+  table td {
+    font-size: 0.8rem;
+    padding: 0.75rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  table th,
+  table td {
+    padding: 1rem 0.5rem;
+    min-width: 80px;
+    .content img {
+      width: 300px;
+    }
+  }
+  table td {
+    padding: 0;
+  }
+  .content img {
+    width: 50%;
+  }
+}
