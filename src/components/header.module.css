@@ -7,15 +7,18 @@
   max-height: 80px;
   overflow: hidden;
   background-color: #fff;
-  transition: all 0.4s;
+  transition: all 0.2s;
 }
+.borderBt {
+  border-bottom: 1px solid #dee3eb;
+}
+
 .headerBg {
   z-index: 98;
   width: 100%;
   height: 0;
   position: fixed;
   bottom: 0;
-  background-color: black;
   transition: background-color 0.2s;
 }
 .headerBgOn {
@@ -66,12 +69,17 @@
   padding: 8px 0;
   display: block;
 }
+
+.subMenu > li svg {
+  margin-left: 0.25rem;
+  font-size: 0.75rem;
+}
 .subMenu > li a:hover {
   color: #0084e1;
 }
 
 .menuOn {
-  max-height: 500px;
+  max-height: 999px;
 }
 .menuOn::after {
   content: "";

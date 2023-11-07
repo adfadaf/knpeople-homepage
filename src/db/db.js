@@ -5,28 +5,38 @@ const menu = [
   {
     menu: "회사소개",
     subMenu: [
-      { id: "intro", title: "회사개요" },
-      { id: "ceo", title: "CEO 인사말" },
-      { id: "history", title: "연혁" },
-      { id: "map", title: "오시는 길" },
+      { id: "intro", title: "회사개요", isLink: false },
+      { id: "ceo", title: "CEO 인사말", isLink: false },
+      { id: "history", title: "연혁", isLink: false },
+      { id: "map", title: "오시는 길", isLink: false },
     ],
   },
   {
     menu: "제품",
     subMenu: [
-      { id: "aspera", title: "Aspera" },
-      { id: "IBM", title: "IBM Solution" },
+      { id: "aspera", title: "Aspera", isLink: false },
+      { id: "IBM", title: "IBM Solution", isLink: false },
     ],
   },
   {
     menu: "고객지원",
-    subMenu: [{ id: "contact", title: "문의하기" }],
+    subMenu: [{ id: "contact", title: "문의하기", isLink: false }],
   },
   {
     menu: "소식",
     subMenu: [
-      { id: "youtube", title: "유튜브" },
-      { id: "blog", title: "블로그" },
+      {
+        id: "youtube",
+        title: "유튜브",
+        isLink: true,
+        link: "https://www.youtube.com/@knpeople4271",
+      },
+      {
+        id: "blog",
+        title: "블로그",
+        isLink: true,
+        link: "https://knpeople2018-itstudio.tistory.com/",
+      },
     ],
   },
 ];

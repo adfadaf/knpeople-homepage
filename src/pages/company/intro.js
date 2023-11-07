@@ -51,13 +51,11 @@ export default function Intro() {
           </table>
           <div className={`${introCss.contentBox}`}>
             <h2 className={`position-relative`}>
-              {/* <sapn className={`${introCss.dot} ${introCss.left}`}>"</sapn>
-            <sapn className={`${introCss.dot} ${introCss.right}`}>"</sapn> */}
               <strong>케이엔피플</strong>은 글로벌 기업 IBM의 한국 파트너로
               <br />
               신뢰할 수 있는 소프트웨어, 솔루션을 제공 및 개발합니다.
             </h2>
-            <img src="/img/people.png" />
+            <img src="/img/people.png" alt="knp peoples" />
             <p className={`${introCss.content}`}>
               케이엔피플은 Global IT기업 IBM의 한국 파트너로써 IBM Software
               Business 와 B2C 모바일

@@ -60,18 +60,7 @@ table td {
   line-height: 1.3;
   font-weight: 500;
 }
-/* .dot {
-  position: absolute;
-  font-size: 2rem;
-  font-weight: bold;
-  top: -10px;
-}
-.left {
-  left: 250px;
-}
-.right {
-  right: 250px;
-} */
+
 .contentBox img {
   width: 300px;
 }
