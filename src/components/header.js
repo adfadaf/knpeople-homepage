@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Accordion } from "react-bootstrap";
 import { menu } from "../db/db";
 import headerCss from "./header.module.css";
 import { Link } from "react-router-dom";
@@ -140,52 +141,29 @@ function MobileMenu(props) {
 
   return (
     <div className={`${headerCss.mobileWrap} ${props.mbOn}`}>
-      <ul className={`${headerCss.mobileMain}`}>
-        <li>
-          <span
-            className={` ${active}`}
-            onClick={() => {
-              if (isOn) {
-                setIsOn(!isOn);
-              } else {
-                setIsOn(!isOn);
-              }
-              console.log(isOn);
-            }}
-          >
-            asdfadf
-          </span>
-          <ul className={`${headerCss.mbSub}`}>
-            <li>adsfas</li>
-            <li>adsfas</li>
-            <li>adsfas</li>
-            <li>adsfas</li>
-            <li>adsfas</li>
-          </ul>
-        </li>
-        <li>
-          <span
-            className={` ${active}`}
-            onClick={() => {
-              if (isOn) {
-                setIsOn(!isOn);
-              } else {
-                setIsOn(!isOn);
-              }
-              console.log(isOn);
-            }}
-          >
-            asdfadf
-          </span>
-          <ul className={`${headerCss.mbSub}`}>
-            <li>adsfas</li>
-            <li>adsfas</li>
-            <li>adsfas</li>
-            <li>adsfas</li>
-            <li>adsfas</li>
-          </ul>
-        </li>
-      </ul>
+      <div>adfs</div>
+      <Accordion>
+        {menu.map((main, i) => {
+          return (
+            <Accordion.Item eventKey={i} key={i}>
+              <Accordion.Header>{main.menu}</Accordion.Header>
+              {main.subMenu.map((sub, i) => {
+                return (
+                  <Accordion.Body className={`${headerCss.test}`} key={i}>
+                    {sub.isLink ? (
+                      <a href={sub.link} target="_blank">
+                        {sub.title}
+                      </a>
+                    ) : (
+                      <Link to={sub.id}>{sub.title}</Link>
+                    )}
+                  </Accordion.Body>
+                );
+              })}
+            </Accordion.Item>
+          );
+        })}
+      </Accordion>
     </div>
   );
 }

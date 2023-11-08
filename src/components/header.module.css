@@ -129,6 +129,13 @@
 .mbOn {
   right: 0;
 }
+
+@media screen and (max-width: 992px) {
+  .menu {
+    width: 70%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header {
     height: 80px;
